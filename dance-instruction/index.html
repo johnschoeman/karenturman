@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+Danse Enseignement | Dance Teaching | Karen Turman
+</title>
+
+  
+  
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Noto+Serif+SC:wght@200..900&family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&family=Ysabeau:ital,wght@0,1..1000;1,1..1000&display=swap"
+    rel="stylesheet">
+  <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/8.5.10/mmenu.min.css">
+  <link rel="stylesheet" href='https://karenturman.com/style.css'>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet">
+
+  
+
+<!-- Primary Meta Tags -->
+
+
+
+
+<meta name="description" content="" />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:title" content="Danse Enseignement | Dance Teaching | Karen Turman" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://karenturman.com/dance-instruction/" />
+
+<meta property="article:section" content="dance-instruction" />
+
+
+</head>
+
+<body class="body-block">
+  <div id="sidebar-mask" onclick="toggleSidebar()"></div>
+
+  
+  <div id="sidebar" class="">
+    <div class="logo-title">
+      <div class="title-inner">
+        
+        <div class="avatar">
+          <img src="https://karenturman.com/images/avatar.jpg" alt="avatar">
+        </div>
+        
+
+        <div class="title">
+          <h3><a href="https://karenturman.com/">Karen Turman</a></h3>
+          <div class="description">
+            <p></p>
+          </div>
+        </div>
+      </div>
+
+      <ul class="social-links">
+        
+        <li>
+          <a href="https://www.linkedin.com/in/karen-turman-2952a33a5/" aria-label="Linkedin">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </li>
+        
+        <li>
+          <a href="https://www.instagram.com/turmanologie/" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </li>
+        
+        <li>
+          <a href="https://harvard.academia.edu/KarenTurman" aria-label="Graduation-Cap">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </a>
+        </li>
+        
+      </ul>
+      <nav class="sidebar-nav">
+        
+        <a href="https://karenturman.com/teaching/">Enseignement | Teaching</a>
+        
+        <a href="https://karenturman.com/research/">Recherche | Research</a>
+        
+        <a href="https://karenturman.com/dance-research/">Danse Recherche | Dance Research</a>
+        
+        <a href="https://karenturman.com/dance-instruction/">Danse Enseignement | Dance Teaching</a>
+        
+        <a href="https://karenturman.com/resources/">Ressources | Resources</a>
+        
+      </nav>
+    </div>
+  </div>
+  
+
+  <div id="main">
+    
+
+    <div class="page-top">
+
+      <nav class="nav">
+        <a href="https://karenturman.com/">
+          Accueil | Home
+        </a>
+        
+        <a href="https://karenturman.com/teaching/" >
+          Enseignement | Teaching
+        </a>
+        
+        <a href="https://karenturman.com/research/" >
+          Recherche | Research
+        </a>
+        
+        <a href="https://karenturman.com/dance-research/" >
+          Danse Recherche | Dance Research
+        </a>
+        
+        <a href="https://karenturman.com/dance-instruction/"  class="active" >
+          Danse Enseignement | Dance Teaching
+        </a>
+        
+        <a href="https://karenturman.com/resources/" >
+          Ressources | Resources
+        </a>
+        
+      </nav>
+
+      <div class="information">
+        <div class="back_btn">
+          <a onclick="window.history.go(-1)" aria-label="Go back"><i class="fas fa-chevron-left"></i></a>
+        </div>
+        <div class="theme_btn">
+          <a onclick="toggleTheme()" aria-label="Toggle theme"><i class="fas fa-moon" id="theme-icon"></i></a>
+        </div>
+        <div class="avatar_btn">
+          <a onclick="toggleSidebar()" aria-label="Toggle sidebar"><i class="fas fa-bars"></i></a>
+        </div>
+      </div>
+    </div>
+
+    
+
+    <div class="autopagerize_page_element">
+      <div class="content animated fadeIn ">
+         
+
+<article class="content-article">
+  <main class="article-content">
+    <div class="article-intro-container">
+      <div class="intro-header">
+        <h1 class="heading">Danse Enseignement | Dance Teaching</h1>
+      </div>
+    </div>
+
+    
+  </main>
+
+  <br />
+</article>
+
+      </div>
+    </div>
+    <div class="page-footer">
+      <div class="footer-content">
+        <span>Built with <a href="https://www.getzola.org/" target="_blank">Zola</a></span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      var sidebar = document.getElementById("sidebar");
+      var mask = document.getElementById("sidebar-mask");
+      sidebar.classList.toggle("open");
+      mask.classList.toggle("open");
+    }
+
+    function toggleTheme() {
+      const body = document.body;
+      const icon = document.getElementById("theme-icon");
+      if (body.getAttribute("data-theme") === "dark") {
+        body.setAttribute("data-theme", "light");
+        icon.classList.remove("fa-sun");
+        icon.classList.add("fa-moon");
+        localStorage.setItem("theme", "light");
+      } else {
+        body.setAttribute("data-theme", "dark");
+        icon.classList.remove("fa-moon");
+        icon.classList.add("fa-sun");
+        localStorage.setItem("theme", "dark");
+      }
+    }
+
+    // Initialize theme
+    (function () {
+      const savedTheme = localStorage.getItem("theme");
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+      if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
+        document.body.setAttribute("data-theme", "dark");
+        // Icon update will happen after DOM load if we put this script at the end, 
+        // but since this is inline at the end of body, we might need to wait for DOMContentLoaded if the icon isn't ready?
+        // Actually, this script is at the end of body, so elements should be parsed.
+        const icon = document.getElementById("theme-icon");
+        if (icon) {
+          icon.classList.remove("fa-moon");
+          icon.classList.add("fa-sun");
+        }
+      }
+    })();
+
+    // Footnote Navigation
+    document.addEventListener("DOMContentLoaded", function () {
+      // Code Block Language Label
+      document.querySelectorAll('pre code').forEach(code => {
+        const pre = code.parentElement;
+        if (!pre.hasAttribute('data-lang')) {
+          const classes = code.className.split(' ');
+          for (const cls of classes) {
+            if (cls.startsWith('language-')) {
+              pre.setAttribute('data-lang', cls.replace('language-', ''));
+              break;
+            }
+          }
+        }
+      });
+    });
+  </script>
+
+  <script src="//instant.page/5.1.0" type="module"
+    integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+</body>
+
+</html>
