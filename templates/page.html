@@ -60,98 +60,12 @@
     <div class="article-intro-container">
       <div class="intro-header">
         <h1 class="heading">{{ page.title }}</h1>
-        <div class="meta-line">
-          {% if page.date %}
-          <span class="date">{{ page.date | date(format="%b. %d, %Y") }}</span>
-          {% endif %}
-
-          {% if page.taxonomies.tags %}
-          <span class="separator">/</span>
-          <span class="tags">
-            {% for tag in page.taxonomies.tags %}
-            <a href="{{ get_taxonomy_url(kind=" tags", name=tag) }}">#{{ tag }}</a>
-            {% endfor %}
-          </span>
-          {% endif %}
-        </div>
-      </div>
-
-      <div class="intro-body">
-        {% if page.description %}
-        <div class="intro-abstract">
-          <div class="abstract-title">ABSTRACT</div>
-          <p class="description">{{ page.description }}</p>
-        </div>
-        {% endif %}
-
-        {% if page.toc and page.extra.toc | default(value=true) %}
-        <details class="intro-toc">
-          <summary class="toc-title">CONTENTS</summary>
-          <div class="toc-wrapper">
-            <ul class="toc-list">
-              <li class="toc-root">
-                <a href="#" class="active-toc">{{ page.title }}</a>
-                {% if page.toc %}
-                <ul>
-                  {% for h1 in page.toc %}
-                  <li>
-                    <a href="{{ h1.permalink | safe }}">{{ h1.title }}</a>
-                    {% if h1.children %}
-                    <ul>
-                      {% for h2 in h1.children %}
-                      <li>
-                        <a href="{{ h2.permalink | safe }}">{{ h2.title }}</a>
-                        {% if h2.children %}
-                        <ul>
-                          {% for h3 in h2.children %}
-                          <li>
-                            <a href="{{ h3.permalink | safe }}">{{ h3.title }}</a>
-                          </li>
-                          {% endfor %}
-                        </ul>
-                        {% endif %}
-                      </li>
-                      {% endfor %}
-                    </ul>
-                    {% endif %}
-                  </li>
-                  {% endfor %}
-                </ul>
-                {% endif %}
-              </li>
-            </ul>
-          </div>
-        </details>
-        {% endif %}
       </div>
     </div>
 
     {{ page.content | safe }}
   </main>
-  <section class="article-action-block">
-    <!-- AddToAny BEGIN -->
-    <div class="addtoany-block">
-      <a href="https://www.addtoany.com/share#url={{ page.permalink }}&amp;title={{ page.title }}" target="_blank"
-        rel="noopener noreferrer nofollow"><img class="button" src="https://static.addtoany.com/buttons/a2a.svg" /></a>
-      <a href="https://www.addtoany.com/add_to/mastodon?linkurl={{ page.permalink }}&amp;linkname={{ page.title }}"
-        target="_blank" rel="noopener noreferrer nofollow"><img class="button"
-          src="https://static.addtoany.com/buttons/mastodon.svg" /></a>
-      <a href="https://www.addtoany.com/add_to/telegram?linkurl={{ page.permalink }}&amp;linkname={{ page.title }}"
-        target="_blank" rel="noopener noreferrer nofollow"><img class="button"
-          src="https://static.addtoany.com/buttons/telegram.svg" /></a>
-      <a href="https://www.addtoany.com/add_to/twitter?linkurl={{ page.permalink }}&amp;linkname={{ page.title }}"
-        target="_blank" rel="noopener noreferrer nofollow"><img class="button"
-          src="https://static.addtoany.com/buttons/twitter.svg" /></a>
-      <a href="https://www.addtoany.com/add_to/facebook?linkurl={{ page.permalink }}&amp;linkname={{ page.title }}"
-        target="_blank" rel="noopener noreferrer nofollow"><img class="button"
-          src="https://static.addtoany.com/buttons/facebook.svg" /></a>
-      <a href="https://www.addtoany.com/add_to/line?linkurl={{ page.permalink }}&amp;linkname={{ page.title }}"
-        target="_blank" rel="noopener noreferrer nofollow"><img class="button"
-          src="https://static.addtoany.com/buttons/line.svg" /></a>
-    </div>
-    <!-- AddToAny END -->
 
-  </section>
   <br />
 </article>
 {% endblock content %}

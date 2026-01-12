@@ -1,5 +1,9 @@
-{% extends "_base.html" %} {% block title %}{{ config.title }}{% endblock title
-%} {% block head %}
+{% extends "_base.html" %}
+{% block title %}
+{{ config.title }}
+{% endblock title %}
+{% block head %}
+
 <!-- Primary Meta Tags -->
 <meta name="description" content="{{ config.description }}" />
 
@@ -39,16 +43,13 @@
       </ul>
 
       <nav class="home-nav">
-        <a href="{{ get_url(path='@/teaching/index.md', lang=lang) }}" {% if current_path is starting_with("/teaching")
-          %}class="active" {% endif %}>Teaching</a>
-        <a href="{{ get_url(path='@/research/index.md', lang=lang) }}" {% if current_path is starting_with("/research")
-          %}class="active" {% endif %}>Research</a>
-        <a href="{{ get_url(path='@/dance-research/index.md', lang=lang) }}" {% if current_path is
-          starting_with("/dance-research") %}class="active" {% endif %}>Dance Research</a>
-        <a href="{{ get_url(path='@/dance-instruction/index.md', lang=lang) }}" {% if current_path is
-          starting_with("/dance-instruction") %}class="active" {% endif %}>Dance Instruction</a>
-        <a href="{{ get_url(path='@/about/index.md', lang=lang) }}" {% if current_path is starting_with("/about")
-          %}class="active" {% endif %}>About</a>
+
+        {% for nav_link in config.extra.nav_links %}
+        <a href="{{ get_url(path=nav_link.path, lang=lang) }}">
+          {{ nav_link.label }}
+        </a>
+        {% endfor %}
+
       </nav>
     </div>
   </div>

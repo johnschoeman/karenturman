@@ -1,11 +1,11 @@
 +++
-title = "About Me"
+title = "Profil|About"
 template = "about.html"
 +++
 
-{{ image(src="images/headshot-1.jpg", alt="headshot", caption="Professional headshot of Karen", class="avatar") }}
+<!-- {{ image(src="images/headshot-1.jpg", alt="headshot", caption="Professional headshot of Karen", class="avatar") }} -->
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Karen Turman est professeure de français et instructrice internationale de danse.
+Elle explore les intersections entre la langue, la culture et l’apprentissage incarné à travers l’enseignement, la recherche et le mouvement.
+
+Karen Turman is a french professor and international dance instructor exploring the intersections of language, culture, and embodied learning through teaching, scholarship, and movement.

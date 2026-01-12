@@ -37,13 +37,15 @@
           <img src="{{ get_url(path=config.extra.avatar) }}" alt="avatar">
         </div>
         {% endif %}
+
         <div class="title">
-          <h3><a href="{{ get_url(path=" @/_index.md", lang=lang) }}">{{ config.title }}</a></h3>
+          <h3><a href="{{ get_url(path='@/_index.md', lang=lang) }}">{{ config.title }}</a></h3>
           <div class="description">
             <p>{{ config.description }}</p>
           </div>
         </div>
       </div>
+
       <ul class="social-links">
         {% for link in config.extra.social_links %}
         <li>
@@ -54,12 +56,9 @@
         {% endfor %}
       </ul>
       <nav class="sidebar-nav">
-        <a href="{{ get_url(path='@/_index.md', lang=lang) }}">Home</a>
-        <a href="{{ get_url(path='@/teaching/index.md', lang=lang) }}">Teaching</a>
-        <a href="{{ get_url(path='@/research/index.md', lang=lang) }}">Research</a>
-        <a href="{{ get_url(path='@/dance-research/index.md', lang=lang) }}">Dance Research</a>
-        <a href="{{ get_url(path='@/dance-instruction/index.md', lang=lang) }}">Dance Instruction</a>
-        <a href="{{ get_url(path='@/about/index.md', lang=lang) }}">About</a>
+        {% for nav_link in config.extra.nav_links %}
+        <a href="{{ get_url(path=nav_link.path, lang=lang) }}">{{ nav_link.label }}</a>
+        {% endfor %}
       </nav>
     </div>
   </div>
@@ -69,20 +68,17 @@
     {% if current_path != "/" %}
 
     <div class="page-top">
+
       <nav class="nav">
-        <a href="{{ get_url(path='@/_index.md', lang=lang) }}">Home</a>
-        <a href="{{ get_url(path='@/teaching/index.md', lang=lang) }}" {% if current_path is starting_with("/teaching")
-          %} class="active" {% endif %}>
-          Teaching
+        <a href="{{ get_url(path='@/_index.md', lang=lang) }}">
+          Accueil | Home
         </a>
-        <a href="{{ get_url(path='@/research/index.md', lang=lang) }}" {% if current_path is starting_with("/research")
-          %}class="active" {% endif %}>Research</a>
-        <a href="{{ get_url(path='@/dance-research/index.md', lang=lang) }}" {% if current_path is
-          starting_with("/dance-research") %}class="active" {% endif %}>Dance Research</a>
-        <a href="{{ get_url(path='@/dance-instruction/index.md', lang=lang) }}" {% if current_path is
-          starting_with("/dance-instruction") %}class="active" {% endif %}>Dance Instruction</a>
-        <a href="{{ get_url(path='@/about/index.md', lang=lang) }}" {% if current_path is starting_with("/about")
-          %}class="active" {% endif %}>About</a>
+        {% for nav_link in config.extra.nav_links %}
+        <a href="{{ get_url(path=nav_link.path, lang=lang) }}" {% if current_path is starting_with(nav_link.short_path)
+          %} class="active" {% endif %}>
+          {{ nav_link.label }}
+        </a>
+        {% endfor %}
       </nav>
 
       <div class="information">

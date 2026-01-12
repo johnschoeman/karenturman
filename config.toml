@@ -12,6 +12,7 @@ build_search_index = false
 # Whether to do syntax highlighting
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
 highlight_code = false
+insert_anchor_links = "none"
 
 [extra]
 avatar = "images/avatar.jpg"
@@ -19,4 +20,11 @@ social_links = [
     { name = "linkedin", url = "https://www.linkedin.com/in/karen-turman-2952a33a5/" },
     { name = "instagram", url = "https://www.instagram.com/turmanologie/" },
     { name = "graduation-cap", url = "https://harvard.academia.edu/KarenTurman" },
+]
+nav_links = [
+    { label = "Enseignement | Teaching", path = "@/teaching/index.md", short_path = "/teaching" },
+    { label = "Recherche | Research", path = "@/research/index.md", short_path = "/research" },
+    { label = "Danse Recherche | Dance Research", path = "@/dance-research/index.md", short_path = "/dance-research" },
+    { label = "Danse Enseignement | Dance Teaching", path = "@/dance-instruction/index.md", short_path = "/dance-instruction" },
+    { label = "Ressources | Resources", path = "@/resources/index.md", short_path = "/resources" },
 ]
