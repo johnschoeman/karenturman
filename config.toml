@@ -1,5 +1,6 @@
 # The URL the site will be built for
 base_url = "https://karenturman.com"
+title = "Karen Turman"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
@@ -13,4 +14,7 @@ build_search_index = false
 highlight_code = false
 
 [extra]
-# Put all your custom variables here
+avatar = "images/avatar.jpg"
+social_links = [
+    { name = "github", url = "https://github.com/Resorie/zola-theme-nivis" }
+]

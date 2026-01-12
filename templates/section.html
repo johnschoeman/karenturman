@@ -1,0 +1,25 @@
+{% extends "_base.html" %}
+{% block title %}
+{% endblock title %}
+{% block head %}
+
+<!-- Primary Meta Tags -->
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+
+<!-- Twitter -->
+{% endblock head %} {% block page_heading %}
+<h1 class="title">
+  <a href="/">{{ config.title }}</a>
+</h1>
+{% endblock page_heading %} {% block content %}
+<main class="article-list">
+  <div class="ad">{% block ad1 %} {% endblock ad1 %}</div>
+  <article class="article-block title-block">
+  </article>
+
+  <div class="ad">{% block ad2 %} {% endblock ad2 %}</div>
+
+</main>
+{% endblock content %}
